@@ -7,7 +7,7 @@ RUN apk add --no-cache nginx \
     && mkdir -p /run/nginx /var/log/nginx
 
 COPY nginx/conf/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/conf/conf.d/default.conf /etc/nginx/http.d/default.conf
+COPY nginx/conf/conf.d/default.conf /etc/nginx/conf.d/default.conf
 COPY docker/start.sh /usr/local/bin/start.sh
 
 RUN chmod +x /usr/local/bin/start.sh
